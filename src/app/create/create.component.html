@@ -27,7 +27,7 @@
                 aria-describedby="inputGroup-sizing-sm"
                 placeholder="Enter Blog Id"
                 [class.is-invalid]="f['id'].invalid && f['id'].touched"
-                (input)="this.checkUser()"
+                (change)="this.checkUser()"
                 autofocus
               />
             </div>
@@ -165,9 +165,9 @@
             class="form-control"
             formControlName="img"
             id="inputGroupFile02"
-            (change)="onFileChange($event)"
-            accept="/image/*"
-          />
+            (change)="selectFile($event)"
+         
+                     />
           <!-- <label class="input-group-text" for="inputGroupFile02"
             >Upload Picture</label
           > -->
