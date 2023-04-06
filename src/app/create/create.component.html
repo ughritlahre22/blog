@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form [formGroup]="addData" (ngSubmit)="saveData()">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Blog</h4>
+        </div>
+      </div>
+      <section class="main">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-group input-group-sm mb-4 mt-4">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Id</span>
+              <input
+                name="id"
+                type="number"
+                class="form-control"
+                formControlName="id"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm"
+                placeholder="Enter Blog Id"
+                [class.is-invalid]="f['id'].invalid && f['id'].touched"
+                (input)="this.checkUser()"
+                autofocus
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="input-group input-group-sm mb-4 mt-4">
+              <span class="input-group-text" id="inputGroup-sizing-sm"
+                >Title</span
+              >
+              <input
+                name="title"
+                type="text"
+                class="form-control"
+                formControlName="title"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm"
+                placeholder="Enter Blog Title"
+                [class.is-invalid]="f['title'].invalid && f['title'].touched"
+              />
+              <small
+                class="alert-danger"
+                *ngIf="f['title'].invalid && f['title'].touched"
+              >
+                <small
+                  *ngIf="f['title'].errors && f['title'].errors['minlength']"
+                >
+                  6 Charector Must
+                </small>
+                <small
+                  *ngIf="f['title'].errors && f['title'].errors['maxlength']"
+                >
+                  30 Charector Allowed
+                </small>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="input-group input-group-sm mb-4">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Content</span
+          >
+          <input
+            name="content"
+            type="text"
+            class="form-control"
+            formControlName="content"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            placeholder="Enter Blog Content"
+            [class.is-invalid]="f['content'].invalid && f['content'].touched"
+          />
+          <small
+            class="alert-danger"
+            *ngIf="f['content'].invalid && f['content'].touched"
+          >
+            <small
+              *ngIf="f['content'].errors && f['content'].errors['minlength']"
+            >
+              10 Charector Must
+            </small>
+            <small
+              *ngIf="f['content'].errors && f['content'].errors['maxlength']"
+            >
+              100 Charector Allowed
+            </small>
+          </small>
+        </div>
+        <div class="input-group input-group-sm mb-4">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Created By</span
+          >
+          <input
+            name="createdby"
+            type="text"
+            class="form-control"
+            formControlName="createdby"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            placeholder="Enter Author Name"
+            [class.is-invalid]="
+              f['createdby'].invalid && f['createdby'].touched
+            "
+          />
+          <small
+            class="alert-danger"
+            *ngIf="f['createdby'].invalid && f['createdby'].touched"
+          >
+            <small
+              *ngIf="
+                f['createdby'].errors && f['createdby'].errors['minlength']
+              "
+            >
+              3 Charector Must
+            </small>
+            <small
+              *ngIf="
+                f['createdby'].errors && f['createdby'].errors['maxlength']
+              "
+            >
+              25 Charector Allowed
+            </small>
+            <small
+              *ngIf="f['createdby'].errors && f['createdby'].errors['pattern']"
+            >
+              Only String Allowed
+            </small>
+          </small>
+        </div>
+        <div class="input-group mb-4">
+          <span class="input-group-text">Comment</span>
+          <textarea
+            name="comment"
+            class="form-control"
+            formControlName="comment"
+            aria-label="With textarea"
+            placeholder="Enter Blog Comment"
+            [class.is-invalid]="f['comment'].invalid && f['comment'].touched"
+          ></textarea>
+          <small
+            class="alert-danger"
+            *ngIf="f['comment'].invalid && f['comment'].touched"
+          >
+            <small
+              *ngIf="f['comment'].errors && f['comment'].errors['maxlength']"
+            >
+              50 Charector Allowed
+            </small>
+          </small>
+        </div>
+        <div class="input-group mb-4">
+          <input
+            id="img"
+            name="img"
+            type="file"
+            class="form-control"
+            formControlName="img"
+            id="inputGroupFile02"
+            (change)="onFileChange($event)"
+            accept="/image/*"
+          />
+          <!-- <label class="input-group-text" for="inputGroupFile02"
+            >Upload Picture</label
+          > -->
+        </div>
+
+        <div class="managebtn text-center">
+          <button
+            name="btnPost"
+            type="submit"
+            class="btn btn-success"
+            [disabled]="!addData.valid"
+            [hidden]="btnpost"
+          >
+            Post</button
+          >&nbsp;
+          <button
+            name="btnUpdate"
+            type="button"
+            class="btn btn-success"
+            (click)="updateData()"
+            [hidden]="btnupdate"
+            [disabled]="addData.invalid"
+          >
+            Update</button
+          >&nbsp;
+
+          <button type="reset" class="btn btn-danger" (click)="cancel()">
+            Cancel
+          </button>
+        </div>
+      </section>
+    </form>
+  </body>
+</html>

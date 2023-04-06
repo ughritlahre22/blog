@@ -1,0 +1,6 @@
+body{
+    background: url(../error.png);
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+}

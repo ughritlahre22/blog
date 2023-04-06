@@ -1,0 +1,33 @@
+.main{
+    padding: 1rem;
+}
+body{
+    background-color: rgb(77, 55, 27);
+}
+h4{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color:rgb(52, 122, 124);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.managebtn{
+    padding: 5px;
+    justify-content: center;
+    justify-items: center;
+   
+}
+.btn{
+    margin: 0px 50px;
+    width: 25%;
+}
+small{
+    color: rgb(245, 33, 33);
+    padding-left: 3px!important;
+    font-weight: 600;
+}

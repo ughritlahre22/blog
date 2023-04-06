@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ======nav bar======== */
+.navbar {
+  background-color: rgb(6, 41, 75);
+  padding: 10px;
+  cursor: pointer;
+}
+.navbar-brand {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: 20px;
+  font-family: "Lobster", cursive;
+}
+
+.navbar i {
+  color: white;
+}
+.inav {
+  color: white;
+  border: 1px solid goldenrod;
+  border-radius: 70%;
+  padding: 5px;
+  margin-left: 10px;
+}
+.nav-link {
+  color: whitesmoke;
+}
+.nav-link:hover {
+  color: rgb(223, 167, 23);
+  transition: 0.2s;
+}
+.nav-item {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-left: 35px;
+}
+.nav-item .active {
+  color: rgb(223, 167, 23);
+}
+/* =========sidebar=============== */
+.sidebarbtn {
+  border: 1px solid rgb(154, 114, 15);
+  outline: none;
+  border-radius: 0px 5px 5px 5px !important;
+  height: 70vh;
+}
+.sidebarbtn p {
+  color: whitesmoke;
+  background-color: rgb(154, 114, 15);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 5px;
+}
+.sidebarcard {
+  height: 62vh !important;
+  width: 185px;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+.sidebarcard ul {
+  list-style-type: disc !important;
+  text-align: left;
+  padding-left: 30px;
+  padding-top: 25px;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.sidebarcard h6 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.sidebarcard li {
+  list-style-type: disc !important;
+  padding: 5px 0px;
+}
+
+/* ==============main============ */
+.main h5 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.main h6 {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.main p {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.main .card {
+  width: 90%;
+}
+.main .card:hover {
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.75);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.main .card-body {
+  padding: 0px 5px;
+}
+.main .author {
+  font-size: 0.6rem;
+  font-weight: 300;
+}
+.main .comment {
+  font-size: 0.6rem;
+  font-weight: 400;
+}
+
+/* ========footer======== */
+.footer {
+  height: 7vh;
+  background-color: rgb(6, 41, 75);
+  cursor: pointer;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 5px;
+ 
+ 
+}

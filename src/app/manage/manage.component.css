@@ -1,0 +1,32 @@
+.main{
+    padding: 1rem;
+}
+body{
+    background-color: rgb(225, 199, 165);
+}
+h4{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color:rgb(52, 122, 124);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+th{
+    color: white;
+    padding: 5px;
+    font-size: 0.8rem;
+  font-weight: 400;
+}
+.white{
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.btn{
+    margin-left: 30px;
+}

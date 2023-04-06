@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: url(../backgroud1.png) no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    
+}

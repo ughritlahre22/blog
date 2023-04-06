@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-lg-12">
+        <h4>Blog</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <td colspan="4"></td>
+                <td colspan="2"><label for="search">Search Record</label></td>
+                <td colspan="3">
+                  <input
+                    class="form-control me-5"
+                    type="search"
+                    placeholder="Search here"
+                    aria-label="Search"
+                    id="search"
+                    name="search"
+                    [(ngModel)]="searchValue"
+                  />
+                </td>
+              </tr>
+              <tr style="background-color: rgb(53 110 143)" class="text-center">
+               
+                <th data-order="desc" data-name="username" scope="col">Blog Id</th>
+                <th data-order="desc" data-name="username" scope="col">Title</th>
+                <th data-order="desc" data-name="username" scope="col">Content</th>
+                <th data-order="desc" data-name="username" scope="col">Comment</th>
+                <th data-order="desc" data-name="username" scope="col">Created By</th>
+                <th data-order="desc" data-name="username" scope="col">Picture</th>
+                 <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let udata of data |searchfilter:searchValue" class="text-center">
+                <td>{{udata.id}}</td>
+                <td>{{udata.title}}</td>
+                <td>{{udata.content}}</td>
+                <td>{{udata.comment}}</td>
+                <td>{{udata.createdby}}</td>
+                <td><img src="{{udata.img}}" style="height: 40px; width:30px" alt=""></td>
+                <td>
+                  <button type="btnEdit" class="btn btn-warning" routerLink="/create/{{udata.id}}">
+                    <i class="fa fa-edit"></i>
+                  </button>
+                  <button type="btnDelete" class="btn btn-danger" routerLink="/manage" (click)="deleteData(udata.id)">
+                    <i class="fa fa-trash-o fa-lg"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

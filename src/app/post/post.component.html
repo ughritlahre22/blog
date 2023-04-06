@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="row">
+    <div class="col-lg-12">
+      <section class="main">
+        <div class="row">
+          <div class="col-lg-3" *ngFor="let udata of data">
+            <div class="card py-2 mx-4 mt-3 mb-3" 
+             routerLink="/Viewblog"
+            routerLinkActive="Active">
+              <div class="card-body">
+                <img src="../assets/image/mcard1.png " class="img-fluid" alt="" />
+                <h5 class="my-2 text-center">{{ udata.title }}</h5>
+                <h6 class="red">{{ udata.content }}</h6>
+                <p class="mt-2 comment"><b>Comment : </b>{{ udata.comment }}</p>
+                <p class="author text-center">
+                  <b>Created By : </b> {{ udata.createdby }}
+                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>
